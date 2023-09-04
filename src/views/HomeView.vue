@@ -1,15 +1,17 @@
 <template>
-  <HelloWorld />
+  <div>
+    <v-container>
+      <v-img></v-img>
+    </v-container>
+  </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
   name: 'HomeView',
 
   components: {
-    HelloWorld,
+
   },
 };
 </script>
