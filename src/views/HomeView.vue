@@ -10,24 +10,26 @@
             <h1 class="my-2 text-right">About Me</h1> <v-divider inset></v-divider>
           </v-card-title>
           <v-card-text>
-            <p class="text-justify">I'm a Full-Stack Developer with 4+ years of experience. I have a passion for
-              programming and enjoy creating new things. I have worked on a wide range of projects, from small
-              interactive web applications to large scale enterprise applications. I am a quick learner and have
-              excellent problem-solving skills. I am a self-motivated person who can work well alone or as part of a
-              team.</p>
+            <p class="text-justify">Je suis un développeur Full-Stack avec plus de 4 ans d'expérience. J'ai une passion
+              pour la programmation et j'apprécie créer de nouvelles choses. J'ai travaillé sur une gamme étendue de
+              projets, allant de petites applications web interactives à des applications d'entreprise à grande échelle.
+              Je suis un apprenant rapide et je possède d'excellentes compétences en résolution de problèmes. Je suis une
+              personne autonome qui peut travailler efficacement seul ou en équipe.</p>
           </v-card-text>
         </v-col>
       </v-row>
     </v-container>
-    <v-sheet class="d-flex flex-column justify-center bg-black" height="100vh">
+    <v-sheet class="d-flex flex-column justify-center bg-black align-center" height="100vh">
+      <h1 class="font-weight-bold">Pourquoi moi ?</h1>
+      <v-divider class="my-10" width="50%"></v-divider>
       <v-container>
-      <v-row height="100vh" align="center">
-        <plus-card title="4+" icon="mdi-certificate" color="red" value="années d'expériences" />
-        <plus-card title="30+" icon="mdi-check" color="success" value="projets completés" />
-        <plus-card title="100%" icon="mdi-timer" value="de deadlines respectées" />
-    </v-row>
-    </v-container>
-  </v-sheet>
+        <v-row height="100vh" align="center">
+          <plus-card title="4+" icon="mdi-certificate" color="red" value="années d'expériences" />
+          <plus-card title="30+" icon="mdi-check" color="success" value="projets completés" />
+          <plus-card title="100%" icon="mdi-timer" value="de deadlines respectées" />
+        </v-row>
+      </v-container>
+    </v-sheet>
   </div>
 </template>
 
@@ -49,5 +51,4 @@ export default
   margin: 0;
   padding: 0;
   background-color: black;
-}
-</style>
+}</style>
