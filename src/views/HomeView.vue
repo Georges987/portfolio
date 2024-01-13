@@ -42,46 +42,54 @@
 
     <v-sheet class="d-flex flex-column justify-center align-center" height="100vh">
       <v-container>
-      <v-row>
-        <v-col cols="12" lg="5">
-          <h1 class="my-2">
-            {{ iskill ? 'Mes Compétences' : 'Mes Outils' }}
-          </h1>
-          <p>
-            {{ iskill ? 'Je développe des interfaces utilisateur simples, intuitives et réactives pour les applications web et mobiles. En tant que développeur Full-Stack, je possède une expertise dans la création d\'applications web complètes.' : 'Dans mon processus de développement, j\'optimise mon efficacité en utilisant une sélection d\'outils de pointe.' }}
-          </p>
-          <v-switch v-model="iskill" hide-details inset :label="iskill ? 'Mes Compétences' : 'Mes Outils'"></v-switch>
-        </v-col>
-        <v-col cols="12" lg="6">
-          <v-row v-if="iskill" align="start">
-            <v-col v-for="ic in skills" :key="ic">
-              <v-card width="65" variant="outlined" :color="ic.color">
-                <v-card-text>
-                  <v-row>
-                    <v-col cols="2">
-                      <v-icon :color="ic.color" size="30px">{{ ic.icon }}</v-icon>
-                    </v-col>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-          <v-row v-else align="start">
-            <v-col v-for="ic in outils" :key="ic">
-              <v-card width="65" variant="outlined" :color="ic.color">
-                <v-card-text>
-                  <v-row>
-                    <v-col cols="2">
-                      <v-icon :color="ic.color" size="30px">{{ ic.icon }}</v-icon>
-                    </v-col>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+        <v-row>
+          <v-col cols="12" lg="5">
+            <h1 class="my-2">
+              {{ iskill ? 'Mes Compétences' : 'Mes Outils' }}
+            </h1>
+            <p>
+              {{ iskill ? 'Je développe des interfaces utilisateur simples, intuitives et réactives pour les applications web et mobiles.En tant que développeur Full - Stack, je possède une expertise dans la création d\'applications web complètes.' : 'Dans mon processus de développement, j\'optimise mon efficacité en utilisant une sélection d\'outils de pointe.' }}
+            </p>
+            <v-switch v-model="iskill" hide-details inset :label="iskill ? 'Mes Compétences' : 'Mes Outils'"></v-switch>
+          </v-col>
+          <v-col cols="12" lg="6">
+            <v-row v-if="iskill" align="start">
+              <v-col v-for="ic in skills" :key="ic">
+              <v-tooltip location="top" :text="ic.title">
+                <template v-slot:activator="{ props }">
+                <v-card v-bind="props" width="65" variant="outlined" :color="ic.color">
+                  <v-card-text>
+                    <v-row>
+                      <v-col cols="2">
+                        <v-icon :color="ic.color" size="30px">{{ ic.icon }}</v-icon>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </v-card>
+              </template>
+              </v-tooltip>
+              </v-col>
+            </v-row>
+            <v-row v-else align="start">
+              <v-col v-for="ic in outils" :key="ic">
+              <v-tooltip location="top" :text="ic.title">
+                <template v-slot:activator="{ props }">
+                <v-card v-bind="props" width="65" variant="outlined" :color="ic.color">
+                  <v-card-text>
+                    <v-row>
+                      <v-col cols="2">
+                        <v-icon :color="ic.color" size="30px">{{ ic.icon }}</v-icon>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </v-card>
+              </template>
+              </v-tooltip>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-sheet>
   </div>
 </template>
@@ -283,6 +291,11 @@ export default
             icon: 'mdi-google-my-business',
             color: 'blue',
           },
+          {
+            title: 'Terminal',
+            icon: 'mdi-console',
+            color: 'green',
+          }
         ]
       }
     },
@@ -294,5 +307,4 @@ export default
   margin: 0;
   padding: 0;
   background-color: black;
-}
-</style>
+}</style>
