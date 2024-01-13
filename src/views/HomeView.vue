@@ -1,17 +1,16 @@
 <template>
-  <v-container>
-    <HelloWorld/>
-  </v-container>
+  <div>
+    
+  </div>
 </template>
 
 <script>
 
 export default
-{
-  name: 'HomeView',
+  {
+    name: 'HomeView',
+    components: {
 
-  components: {
-    HelloWorld: () => import('@/components/HelloWorld.vue'),
-  },
-};
+    },
+  };
 </script>
