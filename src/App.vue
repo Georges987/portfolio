@@ -49,11 +49,35 @@ export default {
 </script>
 
 <style>
-#App {
-  background: black;
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .router-link-active {
   color: red;
 }
+
+/* Largeur de la barre de défilement */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Fond de la barre de défilement */
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+/* Couleur de la poignée de défilement */
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 6px;
+}
+
+/* Changement de couleur de la poignée de défilement au survol */
+::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
 </style>
