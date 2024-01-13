@@ -24,7 +24,7 @@
       <v-row height="100vh" align="center">
         <plus-card title="4+" icon="mdi-certificate" color="red" value="années d'expériences" />
         <plus-card title="30+" icon="mdi-check" color="success" value="projets completés" />
-        <plus-card title="100%" icon="mdi-time" value="de deadlines respectées" />
+        <plus-card title="100%" icon="mdi-timer" value="de deadlines respectées" />
     </v-row>
     </v-container>
   </v-sheet>
